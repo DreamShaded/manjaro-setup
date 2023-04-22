@@ -11,4 +11,3 @@
 
 ## TODO:
 1. Почистить .bashrc и .zshrc
-
