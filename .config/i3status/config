@@ -16,7 +16,7 @@ general {
 
 # order += "ipv6"
 order += "cpu_usage"
-order += "cpu_temperature 0"
+# order += "cpu_temperature 0"
 order += "disk /"
 # order += "disk /home"
 order += "wireless _first_"
@@ -27,11 +27,11 @@ order += "memory"
 order += "tztime local"
 
 cpu_usage {
-        format = " cpu %degrees °C "
+        format = "cpu  %usage "
 }
 
 cpu_temperature 0 {
-        format = "cpu  %usage "
+        format = " cpu %degrees °C "
 }
 
 load {
