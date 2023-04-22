@@ -9,5 +9,10 @@
 1. [FZF](https://github.com/junegunn/fzf)
 2. Python (обычно предустановлен)
 
+## Установка:
+1. Исправить имя и почту в .gitconfig
+2. Выполнить ```python install.py```
+
+
 ## TODO:
 1. Почистить .bashrc и .zshrc
