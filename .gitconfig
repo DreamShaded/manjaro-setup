@@ -1,0 +1,37 @@
+[user]
+	email = vzhyx@ya.ru
+	name = Роман Юрьевич Троицкий
+
+[alias]
+	please = push --force-with-lease
+	it = !git init && git commit -m "feat: init repo" --allow-empty
+	st = status
+	rh = reset --hard
+  co = checkout
+
+	cm = commit -m
+	cma = commit --all -m
+	cmav = commit --all -m --no-verify
+
+  cp = cherry-pick
+  cpc = cherry-pick --continue
+
+  rbi = rebase -i
+  rbc = rebase --continue
+
+[init]
+	defaultBranch = master
+
+[pull]
+  # может мешать делать pull origin other_branch
+	rebase = true
+
+[core]
+  autocrlf = input
+	fileMode = false
+	excludesfile = /home/r/.gitignore_global
+
+[push]
+  # осторожно с этим. Знай, куда пушишь.
+	autoSetupRemote = true
+	default = current
