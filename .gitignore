@@ -1,2 +1,9 @@
 workingAliases.sh
 .vscode
+.wakatime.*
+.wakatime
+.wakatime-*.*
+common/
+.ssh/
+.oh-my-zsh/
+.yarnrc
