@@ -38,7 +38,6 @@ bindsym $mod+d exec --no-startup-id dmenu_recency
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
 
-
 # юзаем хранилище паролей от гнома, для ключницы ssh
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
 
@@ -47,9 +46,10 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secr
 ################################################################################################
 
 exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+bindsym $mod+Ctrl+m exec pavucontrol
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
+exec --no-startup-id redshift-gtk
 #bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
@@ -63,11 +63,10 @@ bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym Print exec /usr/bin/flameshot gui
+bindsym $mod+Shift+v exec /usr/bin/diodon
 
 # focus_follows_mouse no
 
@@ -149,7 +148,7 @@ set $ws6 "obs"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "srv"
-set $ws10 "10"
+set $ws10 "why"
 
 # switch to workspace
 bindsym F1 workspace $ws1
@@ -188,7 +187,6 @@ bindsym Shift+F0 move container to workspace $ws10; workspace $ws10
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
 
-
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
@@ -209,6 +207,7 @@ for_window [class="octopi"] floating enable
 for_window [title="About Pale Moon"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [class="pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
@@ -273,13 +272,13 @@ mode "resize" {
 
 bindsym $mod+o mode "open"; exec notify-flash "i3" "mode open"
 mode "open" {
-  bindsym t exec /opt/telegram/telegram; mode "default"
-  # bindsym s exec slack; mode "default"
+  bindsym t exec /opt/telegram/Telegram; mode "default"
   bindsym a exec anki; mode "default"
-  bindsym c exec code; mode "default"
+  bindsym c exec codium; mode "default"
   bindsym f exec thunar; mode "default"
   bindsym z exec zeal; mode "default"
-  bindsym v exec virt-manager; mode "default"
+#   bindsym v exec virt-manager; mode "default"
+
   bindsym q exec steam; mode "default"
   bindsym s exec skypeforlinux; mode "default"
   bindsym d exec discord; mode "default"
@@ -293,7 +292,7 @@ mode "open" {
 }
 
 # Lock screen
-bindsym $mod+ctrl+l exec --no-startup-id blurlock
+bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -302,7 +301,7 @@ exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
+exec --no-startup-id diodon
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia

@@ -21,3 +21,8 @@ alias pacman-remove='sudo pacman -Rns'
 alias showLastGitTag='git describe --tags --abbrev=0'
 
 alias findDir='sudo find / -type d -name'
+
+alias monikFullHD='xrandr --output eDP-1 --mode 1920x1080'
+alias monikRightFullHD='xrandr --output eDP-1-1 --mode 2560x1600 --scale 1 --output HDMI-0 --mode 1920x1080 --right-of eDP-1-1'
+alias monikRight4K='xrandr --output eDP-1 --mode 2560x1600 --scale 1 --output HDMI-1-0 --mode 1920x1080 --right-of eDP-1
+'

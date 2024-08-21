@@ -55,7 +55,7 @@ function cd_() {
 setNpmMirror() {
   local registries=(
     'https://registry.npmjs.org/'
-    'https://nexus.vzhyx.digital/repository/npm-available/'
+    'https://nexus.vzhyx.digital/repository/npm-all/'
   )
 
   local current
@@ -65,4 +65,8 @@ setNpmMirror() {
   sed --in-place '/registry/d' /home/r/.yarnrc &&
   echo registry="$current" >> /home/r/.npmrc &&
   echo registry="$current" >> /home/r/.yarnrc
+}
+
+code() {
+  codium $1
 }
