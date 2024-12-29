@@ -1,0 +1,9 @@
+[submodule "packages/zsh-plugins/zsh-syntax-highlighting"]
+	path = packages/zsh-plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "packages/zsh-plugins/zsh-autosuggestions"]
+	path = packages/zsh-plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "packages/zsh-plugins/zsh-git-prompt"]
+	path = packages/zsh-plugins/zsh-git-prompt
+	url = https://github.com/olivierverdier/zsh-git-prompt.git

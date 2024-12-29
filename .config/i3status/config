@@ -15,47 +15,27 @@ general {
 }
 
 # order += "ipv6"
-order += "cpu_usage"
-# order += "cpu_temperature 0"
-order += "disk /"
-# order += "disk /home"
 order += "wireless _first_"
 order += "ethernet _first_"
-# order += "battery all"
-# order += "load"
+order += "battery all"
+order += "disk /"
+order += "load"
 order += "memory"
 order += "tztime local"
 
-cpu_usage {
-        format = "cpu  %usage "
-}
-
-cpu_temperature 0 {
-        format = " cpu %degrees °C "
-}
-
-load {
-        format = "load %1min "
-        # max_threshold = 0.3
-}
-
-disk "/" {
-        # format = " hdd %avail "
-        format = " ⛁ %avail "
+wireless _first_ {
+        format_up = "W: (%quality at %essid) %ip"
+        format_down = "W: down"
 }
 
 ethernet _first_ {
-# if you use %speed, i3status requires root privileges
-        format_up = " lan: %ip %speed "
-        format_down = " no lan "
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
 }
 
 battery all {
-        # format = "%status %percentage %remaining %emptytime"
-        format = " %status %percentage"
+        format = "%status %percentage %remaining"
         format_down = "No battery"
-        last_full_capacity = true
-        integer_battery_capacity = true
         # status_chr = ""
         status_chr = "⚡"
         # status_bat = "bat"
@@ -69,13 +49,34 @@ battery all {
         threshold_type = time
 }
 
+disk "/" {
+        format = "free: %avail"
+}
+
+load {
+        format = "%1min"
+}
+
 memory {
-        format = "%used | %total"
+        format = "%used from %available"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
 
 tztime local {
-        # format = "%Y-%m-%d %H:%M:%S"
-        format = " %d.%m.%Y %H:%M "
+        format = "%Y-%m-%d %H:%M:%S"
 }
+
+cpu_usage {
+        format = "cpu  %usage "
+}
+
+cpu_temperature 0 {
+        format = " cpu %degrees °C "
+}
+
+disk "/" {
+        # format = " hdd %avail "
+        format = " ⛁ %avail "
+}
+

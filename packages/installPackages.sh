@@ -5,16 +5,14 @@ logfile="install_log.txt"
 
 # Задаем массив репозиториев
 repos=(
-  "https://aur.archlinux.org/lib32-libstdc++5.git"
-  "https://aur.archlinux.org/qt5-webkit.git"
-  "https://aur.archlinux.org/davfs2.git"
-  "https://aur.archlinux.org/thunar-nextcloud-plugin.git"
-  "https://aur.archlinux.org/visual-studio-code-bin.git"
-  "https://aur.archlinux.org/zeal.git"
-  "https://aur.archlinux.org/anki.git"
+  "https://aur.archlinux.org/diodon.git"
   "https://aur.archlinux.org/google-chrome.git"
-  "git@github.com:zsh-users/zsh-autosuggestions.git"
-  "git@github.com:zsh-users/zsh-syntax-highlighting.git"
+  "https://aur.archlinux.org/nekoray.git"
+  "https://aur.archlinux.org/sing-geoip.git"
+  "https://aur.archlinux.org/sing-geosite.git"
+  "https://aur.archlinux.org/texlive-full.git"
+  "https://aur.archlinux.org/vscodium.git"
+  "https://aur.archlinux.org/xplugd-git.git"
 )
 
 # если сломал нвидию https://aur.archlinux.org/linux-ck.git
