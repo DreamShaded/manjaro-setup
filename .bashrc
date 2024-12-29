@@ -142,6 +142,8 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "$HOME/.cargo/env"
 
+source ~/completion-for-pnpm.bash
+
 ###-begin-npm-completion-###
 #
 # npm command completion script
