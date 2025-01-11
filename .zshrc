@@ -62,9 +62,6 @@ ${prompt_color}└─${info_color}$ ${reset_color}'
 # my aliases, snippets, bash functions
 #
 ############################################################################
-if [ -f ~/.profile ]; then
-    . ~/.profile
-fi
 
 for file in ~/.r.snippets/*
 do
