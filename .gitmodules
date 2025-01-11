@@ -7,3 +7,6 @@
 [submodule "packages/zsh-plugins/zsh-git-prompt"]
 	path = packages/zsh-plugins/zsh-git-prompt
 	url = https://github.com/olivierverdier/zsh-git-prompt.git
+[submodule "ohmyzsh"]
+	path = ohmyzsh
+	url = git@github.com:ohmyzsh/ohmyzsh.git

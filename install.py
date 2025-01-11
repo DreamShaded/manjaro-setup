@@ -2,7 +2,7 @@ import os
 import shutil  # шутил, кек))0)
 
 # Определяем список исключаемых файлов и папок
-excluded = [".git", ".gitignore", "install.py", "README.md", ".vscode"]
+excluded = [".git", ".gitignore", "install.py", "README.md", ".vscode", "excluded", ".gitmodules"]
 
 # Определяем папку, в которую будем копировать файлы
 destination_folder = os.path.expanduser("~")
